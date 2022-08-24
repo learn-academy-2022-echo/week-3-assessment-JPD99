@@ -65,11 +65,15 @@
         // No need to change anything ABOVE this line ^
 
         return (
+  // 1. Missing jsx fragments; as we are returning multiple things we require the the jsx tags; Lines 71 & 88// 
+  // 2. Forgot to call on the function drawCard from App.js ; Line 73 within the onClick event// 
+  // 3. Onclick event is not correctly punctuated; onclick ==> Onclick; Line 76 //
+   <>
           <h1>Draw a Card</h1>
-          <button onClick={}>
+          <button onClick={drawCard}>
             Click to Draw a Card
           </button>
-          <button onclick={shuffle}>
+          <button onClick={shuffle}>
             Return Cards and Shuffle Deck
           </button>
           <div style={handStyles}>
@@ -81,6 +85,7 @@
               )
             })}
           </div>
+    </>
         )
       }
 
